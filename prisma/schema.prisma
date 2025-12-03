@@ -1,0 +1,125 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  TEACHER
+  ADMIN
+}
+
+enum SubmissionStatus {
+  PENDING
+  SUBMITTED
+  GRADED
+}
+
+model User {
+  id                 String    @id @default(cuid())
+  username           String    @unique
+  passwordHash       String // Changed from "password" to "passwordHash"
+  name               String
+  email              String?   @unique
+  role               Role      @default(STUDENT)
+  mustChangePassword Boolean   @default(false)
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  sessions           Session[]
+  teacher            Teacher?
+  student            Student?
+  isActive           Boolean   @default(true)
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([token])
+}
+
+model Teacher {
+  id          String       @id @default(cuid())
+  userId      String       @unique
+  fullName    String
+  department  String
+  email       String?      @unique
+  phone       String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  students    Student[]
+  assignments Assignment[]
+
+  @@index([userId])
+}
+
+model Student {
+  id             String       @id @default(cuid())
+  userId         String       @unique
+  fullName       String
+  department     String
+  email          String?      @unique
+  year           Int
+  rollNo         String       @unique
+  activeBacklogs Int          @default(0)
+  phone          String
+  parentPhone    String
+  teacherId      String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  teacher        Teacher?     @relation(fields: [teacherId], references: [id])
+  submissions    Submission[]
+
+  @@index([userId])
+  @@index([teacherId])
+  @@index([rollNo])
+}
+
+model Assignment {
+  id           String       @id @default(cuid())
+  title        String
+  description  String       @db.Text
+  className    String
+  dueDate      DateTime
+  fileUrl      String?
+  filePublicId String?
+  teacherId    String
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  teacher      Teacher      @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  submissions  Submission[]
+
+  @@index([teacherId])
+  @@index([className])
+}
+
+model Submission {
+  id           String           @id @default(cuid())
+  assignmentId String
+  studentId    String
+  fileUrl      String
+  filePublicId String
+  note         String?          @db.Text
+  status       SubmissionStatus @default(SUBMITTED)
+  marks        Int?
+  remarks      String?          @db.Text
+  submittedAt  DateTime         @default(now())
+  gradedAt     DateTime?
+  assignment   Assignment       @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  student      Student          @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, studentId])
+  @@index([assignmentId])
+  @@index([studentId])
+}

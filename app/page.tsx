@@ -1,4 +1,4 @@
-import Image from "next/image";
+/*import Image from "next/image";
 
 export default function Home() {
   return (
@@ -61,5 +61,28 @@ export default function Home() {
         </div>
       </main>
     </div>
+  );
+}*/
+import HeroSection from './components/HeroSection'; // Corrected import path
+import Features from './components/Features';
+import TeamSection from './components/TeamSection';
+import Footer from './components/Footer';
+
+/**
+ * @fileoverview Main page component for the root path (/).
+ * This file uses the Next.js App Router convention and imports 
+ * the HeroSection from the './components' folder.
+ */
+export default function HomePage() {
+  return (
+    // The main container for the page content.
+    <main className="min-h-screen">
+      
+      {/* The HeroSection component is imported and rendered here. */}
+      <HeroSection />
+      <Features />
+      <TeamSection />
+      <Footer />
+    </main>
   );
 }
