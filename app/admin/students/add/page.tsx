@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 export default function AddStudentPage() {
   const router = useRouter();
-  const [teachers, setTeachers] = useState<any[]>([]);
+  const [teachers, setTeachers] = useState<{ id: string, fullName: string, department: string }[]>([]);
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -76,8 +76,8 @@ export default function AddStudentPage() {
       setTimeout(() => {
         router.push('/admin/students');
       }, 3000);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : String(err));
     } finally {
       setLoading(false);
     }

@@ -42,8 +42,8 @@ export default function CreateAssignmentPage() {
       }
 
       router.push('/teachers/assignments');
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : String(err));
     } finally {
       setLoading(false);
     }

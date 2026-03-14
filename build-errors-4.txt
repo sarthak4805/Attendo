@@ -1,0 +1,62 @@
+﻿
+> my-next-app@0.1.0 build
+> next build
+
+node.exe : [baseline-browser-mapping] The data 
+in this module is over two months old.  To 
+ensure accurate Baseline data, please update: 
+`npm i baseline-browser-mapping@latest -D`
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([ba 
+   seline-brows...ping@latest -D`:String) [], R  
+  emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   Γû▓ Next.js 16.0.3 (Turbopack)
+
+ ΓÜá The "middleware" file convention is 
+deprecated. Please use "proxy" instead. Learn 
+more: https://nextjs.org/docs/messages/middleware
+-to-proxy
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this 
+module is over two months old.  To ensure 
+accurate Baseline data, please update: `npm i 
+baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this 
+module is over two months old.  To ensure 
+accurate Baseline data, please update: `npm i 
+baseline-browser-mapping@latest -D`
+ Γ£ô Compiled successfully in 5.8s
+   Running TypeScript ...
+Failed to compile.
+
+.next/types/validator.ts:314:39
+Type error: File 'C:/Users/MRUNALI/OneDrive/Deskt
+op/Attendo/Attendo/app/api/auth/signup/route.ts' 
+is not a module.
+
+[0m [90m 312 |[39m {
+ [90m 313 |[39m   type 
+__IsExpected[33m<[39m[33mSpecific[39m 
+[36mextends[39m [33mRouteHandlerConfig[39m[3
+3m<[39m[32m"/api/auth/signup"[39m[33m>>[39m 
+[33m=[39m [33mSpecific[39m
+[31m[1m>[22m[39m[90m 314 |[39m   
+[36mconst[39m handler [33m=[39m {} 
+[36mas[39m [36mtypeof[39m [36mimport[39m([
+32m"../../app/api/auth/signup/route.js"[39m)
+ [90m     |[39m                                
+       [31m[1m^[22m[39m
+ [90m 315 |[39m   type __Check [33m=[39m 
+__IsExpected[33m<[39m[36mtypeof[39m 
+handler[33m>[39m
+ [90m 316 |[39m   [90m// @ts-ignore[39m
+ [90m 317 |[39m   type __Unused [33m=[39m 
+__Check[0m
+Next.js build worker exited with code: 1 and 
+signal: null

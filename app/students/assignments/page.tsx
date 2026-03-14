@@ -23,7 +23,7 @@ export default function StudentAssignmentsPage() {
     }
   };
 
-  const getStatusColor = (submission: any, dueDate: string) => {
+  const getStatusColor = (submission: { status: string; marks?: number; remarks?: string } | null | undefined, dueDate: string) => {
     if (!submission) {
       return new Date(dueDate) < new Date()
         ? 'bg-red-100 text-red-800'
@@ -33,7 +33,7 @@ export default function StudentAssignmentsPage() {
     return 'bg-yellow-100 text-yellow-800';
   };
 
-  const getStatusText = (submission: any, dueDate: string) => {
+  const getStatusText = (submission: { status: string; marks?: number; remarks?: string } | null | undefined, dueDate: string) => {
     if (!submission) {
       return new Date(dueDate) < new Date() ? 'Overdue' : 'Not Submitted';
     }
@@ -55,7 +55,7 @@ export default function StudentAssignmentsPage() {
             </div>
           ) : (
             <div className="space-y-4">
-              {assignments.map((assignment: any) => (
+              {assignments.map((assignment: { id: string, title: string, description: string, dueDate: string, fileUrl?: string, teacher: { fullName: string }, submission?: { status: string, marks?: number, remarks?: string } }) => (
                 <div key={assignment.id} className="bg-white rounded-lg shadow p-6">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">

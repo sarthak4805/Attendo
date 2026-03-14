@@ -82,7 +82,7 @@ export default function AssignmentDetailsPage() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {submissions.map((sub: any) => (
+                  {submissions.map((sub: { id: string, student: { fullName: string, rollNo: string }, submittedAt: string | Date, status: string, marks: number | null, fileUrl: string }) => (
                     <tr key={sub.id}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {sub.student.fullName}

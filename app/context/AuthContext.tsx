@@ -34,11 +34,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  // ✅ Restore session on reload
-  useEffect(() => {
-    refreshUser().finally(() => setLoading(false));
-  }, []);
-
   const refreshUser = async () => {
     const res = await fetch('/api/auth/me', { cache: 'no-store' });
     if (res.ok) {
@@ -46,6 +41,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(data.user);
     }
   };
+
+  // ✅ Restore session on reload
+  useEffect(() => {
+    const initSession = async () => {
+      await refreshUser();
+      setLoading(false);
+    };
+    initSession();
+  }, []);
 
   const login = async (username: string, password: string) => {
     const res = await fetch('/api/auth/login', {

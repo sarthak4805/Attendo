@@ -1,0 +1,120 @@
+﻿
+> my-next-app@0.1.0 lint
+> eslint
+
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\admin\students\add\page.tsx
+   8:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  79:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\admin\students\page.tsx
+  71:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\admin\teachers\add\page.tsx
+  46:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\admin\teachers\page.tsx
+  65:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\api\admin\students\list\route.ts
+  7:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\api\admin\teachers\list\route.ts
+  7:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\api\auth\me\route.ts
+  7:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\api\student\assignments\list\route.ts
+  7:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\api\teacher\assignments\list\route.ts
+  7:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\change-password\page.tsx
+  63:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\components\Features.jsx
+    2:18  warning  'Image' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   27:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   51:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   74:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  167:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\components\Footer.jsx
+   4:43  warning  'FaFacebookF' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  43:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  67:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  91:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\components\HeroSection.jsx
+    3:8   warning  'Image' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  239:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\components\TeamSection.jsx
+  43:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  61:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  80:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  96:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\context\AuthContext.tsx
+  39:5  error  Error: Cannot access variable before it is declared
+
+`refreshUser` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\context\AuthContext.tsx:39:5
+  37 |   // Γ£à Restore session on reload
+  38 |   useEffect(() => {
+> 39 |     refreshUser().finally(() => setLoading(false));
+     |     ^^^^^^^^^^^ `refreshUser` accessed before it is declared
+  40 |   }, []);
+  41 |
+  42 |   const refreshUser = async () => {
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\context\AuthContext.tsx:42:3
+  40 |   }, []);
+  41 |
+> 42 |   const refreshUser = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 43 |     const res = await fetch('/api/auth/me', { cache: 'no-store' });
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |     if (res.ok) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |       const data = await res.json();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 46 |       setUser(data.user);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 47 |     }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 48 |   };
+     | ^^^^^ `refreshUser` is declared here
+  49 |
+  50 |   const login = async (username: string, password: string) => {
+  51 |     const res = await fetch('/api/auth/login', {  react-hooks/immutability
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\login\page.tsx
+  22:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\students\assignments\[id]\submit\page.tsx
+  42:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\students\assignments\page.tsx
+  26:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  36:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  58:45  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\teachers\assignments\[id]\page.tsx
+  15:6   warning  React Hook useEffect has a missing dependency: 'fetchSubmissions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  85:42  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\teachers\assignments\create\page.tsx
+  45:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\teachers\assignments\page.tsx
+  31:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\app\teachers\dashboard\page.tsx
+  10:17  warning  'logout' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 37 problems (15 errors, 22 warnings)
+

@@ -43,8 +43,8 @@ export default function AddTeacherPage() {
       setTimeout(() => {
         router.push('/admin/teachers');
       }, 3000);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : String(err));
     } finally {
       setLoading(false);
     }

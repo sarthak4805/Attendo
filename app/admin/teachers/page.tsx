@@ -62,7 +62,7 @@ export default function AdminTeachersPage() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {teachers.map((teacher: any) => (
+                  {teachers.map((teacher: { id: string, fullName: string, email: string, department: string, phone: string, studentCount: number }) => (
                     <tr key={teacher.id}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {teacher.fullName}

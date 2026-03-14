@@ -28,8 +28,8 @@ export default function TeacherAssignmentsPage() {
         if (!res.ok) throw new Error(data.error || 'Failed to load assignments');
 
         setAssignments(data.assignments);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : String(err));
       } finally {
         setLoading(false);
       }

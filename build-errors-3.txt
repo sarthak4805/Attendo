@@ -1,0 +1,31 @@
+﻿
+> my-next-app@0.1.0 build
+> next build
+
+node.exe : [baseline-browser-mapping] The data 
+in this module is over two months old.  To 
+ensure accurate Baseline data, please update: 
+`npm i baseline-browser-mapping@latest -D`
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([ba 
+   seline-brows...ping@latest -D`:String) [], R  
+  emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+> Build error occurred
+Error: EPERM: operation not permitted, unlink 'C:
+\Users\MRUNALI\OneDrive\Desktop\Attendo\Attendo\.
+next\server\app\admin\students\add\page'
+    at ignore-listed frames {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'unlink',
+  path: 'C:\\Users\\MRUNALI\\OneDrive\\Desktop\\A
+ttendo\\Attendo\\.next\\server\\app\\admin\\stude
+nts\\add\\page'
+}

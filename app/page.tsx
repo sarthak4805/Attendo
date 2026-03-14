@@ -64,8 +64,9 @@ export default function Home() {
   );
 }*/
 import HeroSection from './components/HeroSection'; // Corrected import path
+import HardwareSection from './components/HardwareSection';
 import Features from './components/Features';
-import TeamSection from './components/TeamSection';
+import NewProjectFeaturesSection from './components/TeamSection';
 import Footer from './components/Footer';
 
 /**
@@ -80,8 +81,9 @@ export default function HomePage() {
       
       {/* The HeroSection component is imported and rendered here. */}
       <HeroSection />
+      <HardwareSection />
       <Features />
-      <TeamSection />
+      <NewProjectFeaturesSection />
       <Footer />
     </main>
   );
