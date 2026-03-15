@@ -32,15 +32,15 @@ export async function POST(request: NextRequest) {
     const session = await createSession(user.id);
 
     // 5️⃣ Create response and set cookie
-   const response = NextResponse.json({
-  user: {
-    id: user.id,
-    username: user.username,
-    name: user.name,
-    role: user.role,
-    mustChangePassword: user.mustChangePassword, // ✅ IMPORTANT
-  },
-});
+    const response = NextResponse.json({
+      user: {
+        id: user.id,
+        username: user.username,
+        name: user.name,
+        role: user.role,
+        mustChangePassword: user.mustChangePassword, // ✅ IMPORTANT
+      },
+    });
 
 
     response.cookies.set({
@@ -55,9 +55,13 @@ export async function POST(request: NextRequest) {
 
     return response;
   } catch (error) {
-    console.error('Login error:', error);
+    console.error("=== LOGIN ERROR ===");
+    console.error("Type:", error?.constructor?.name);
+    console.error("Message:", error instanceof Error ? error.message : String(error));
+    console.error("Full:", JSON.stringify(error, null, 2));
+    console.error("===================");
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }

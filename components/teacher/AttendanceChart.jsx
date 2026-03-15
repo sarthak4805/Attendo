@@ -26,8 +26,10 @@ const attendanceData = {
     {
       label: 'Attendance %',
       data: [82, 88, 91, 85],
-      backgroundColor: '#4f46e5',
-      borderRadius: 6,
+      backgroundColor: '#6366f1',
+      hoverBackgroundColor: '#4f46e5',
+      borderRadius: 12,
+      borderSkipped: false,
     },
   ],
 };

@@ -52,7 +52,7 @@ export default function ChangePasswordPage() {
           router.replace('/admin/dashboard');
           break;
         case 'TEACHER':
-          router.replace('/teacher/dashboard');
+          router.replace('/teachers/dashboard');
           break;
         case 'STUDENT':
           router.replace('/student/dashboard');
